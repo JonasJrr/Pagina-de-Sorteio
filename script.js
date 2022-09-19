@@ -1,4 +1,6 @@
-let pessoas = ["Alex", "Fernanda","Mariana","Carol", "Jonas", "José", "Gabrielle", "Carlos", "Danilo", "Felipe", "Matheus", "Mailson", "Lucas"]
+let pessoas = ["Alex", "Fernanda","Mariana","Carol", "Jonas",
+ "José", "Gabrielle", "Carlos", "Danilo", "Felipe", "Matheus",
+  "Mailson", "Lucas", "Rubentina", "Lindaura", "João"]
 
 function sortear(){
 
