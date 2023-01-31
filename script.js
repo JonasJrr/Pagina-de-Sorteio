@@ -1,18 +1,14 @@
 let pessoas = ["Alex", "Fernanda","Mariana","Carol", "Jonas",
  "José", "Gabrielle", "Carlos", "Danilo", "Felipe", "Matheus",
-  "Mailson", "Lucas", "Rubentina", "Lindaura", "João"]
+  "Mailson", "Lucas", "João", "Kaique", "Moisés", "Franco",
+   "Catia", "Ian", "Marcelo", "Diana"]; //array com o nome das pessoas do sorteio
 
-function sortear(){
+function sortear(){ //criando a função para sortear
 
-    let np = pessoas.length;
+    let numPessoas = pessoas.length; //pegando o número de pessoas dentro do array (20)
 
-    let ns = Math.floor(Math.random() * np);
+    let numSorteado = Math.floor(Math.random() * numPessoas); //Math.floor para aproximar para um número inteiro (para baixo)
 
-    document.getElementById("nome").innerHTML = pessoas[ns];
-
+    document.getElementById("nome").innerHTML = pessoas[numSorteado]; 
 }
 
-//pessoas -> array com o nome dos participantes
-//np -> número de pessoas do sorteio
-//ns -> número sorteado
-//Math.floor para aproximar para um número inteiro (para baixo ou piso)
