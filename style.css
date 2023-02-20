@@ -5,21 +5,35 @@
     margin: 0px;
     font-family: 'Itim', cursive;
 }
+
 body{
     background-color: black;
 }
 
+#nome{
+    outline: none;
+    margin: auto 3% auto 3%;
+    padding: 5px;
+}
+
+@media(max-width:400px){
+#nome{
+    outline: none;
+    margin: 10% 3% auto 3%;
+    padding: 5px;}
+}
+
 button{
-    margin: 18% auto auto auto;
-    font-size: 42px;
+    margin: 18% auto auto 1%;
+    font-size: 22px;
     padding: 16px;
     background-color: white;
     border: none;
     border-radius: 40px; 
-    box-shadow: 0px 0px 20px 0px deeppink;
+    box-shadow: 0px 0px 10px 0px deeppink;
     text-shadow: 0px 0px 4px deeppink;
     cursor: pointer;
-    transition: background-color, color, font-size, text-shadow, box-shadow;
+    transition: background-color, color, text-shadow, box-shadow;
     transition-duration: 200ms;
  }
 
@@ -27,34 +41,18 @@ button:hover{
     color: white;
     background-color: deeppink;
     text-shadow: 0px 0px 10px black;
-    box-shadow: 0px 0px 15px 0px white;
-    font-size: 45px;
+    box-shadow: 0px 0px 10px 0px white;
 }
 
-h1{
+h2{
     color: white;
-    margin-top: 5%;
+    margin-top: 2%;
     text-shadow: 1px 1px 8px deeppink;
-    font-size: 55px; 
+    font-size: 25px; 
     transition: font-size, text-shadow;
     transition-duration: 200ms;
-}
-
-@media(max-width:560px){
-h1{
-    color: white;
-    margin-top: 50%;
-    text-shadow: 1px 1px 8px deeppink;
-    font-size: 55px; 
-    transition: font-size, text-shadow;
-    transition-duration: 200ms;}
-}
-
-h1:hover{
-    font-size: 60px;
-    text-shadow: 2px 2px 12px deeppink;
     cursor: default;
-}
+}   
 
 .sorteio{
     text-align: center;

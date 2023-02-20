@@ -1,14 +1,27 @@
-let pessoas = ["Alex", "Fernanda","Mariana","Carol", "Jonas",
- "José", "Gabrielle", "Carlos", "Danilo", "Felipe", "Matheus",
-  "Mailson", "Lucas", "João", "Kaique", "Moisés", "Franco",
-   "Catia", "Ian", "Marcelo", "Diana"]; //array com o nome das pessoas do sorteio
+const form = document.getElementById('form');
+const nomeInput = document.getElementById('nome');
+const nomeLista = document.getElementById('nome-lista');
+const inserirButton = document.getElementById('inserir');
+const sortearButton = document.getElementById('sortear');
+  
+let nomes = []; //Criando o array que vai receber os nomes inseridos através do input
 
-function sortear(){ //criando a função para sortear
+inserirButton.addEventListener('click', () => { //Adicionando função ao botão "INSERIR NOME"
+  const nome = nomeInput.value; //Pegando o valor (nome) inserido no input
+  if (nome) {
+    nomes.push(nome); //Puxando os nomes para dentro do array criado (nomes)
+    nomeLista.innerHTML += `<h2>${nome}</h2>`; //Inserindo os nomes dentro do HTML
+    nomeInput.value = ''; //Limpando o input depois de inserir um nome
+  }
+});
 
-    let numPessoas = pessoas.length; //pegando o número de pessoas dentro do array (20)
-
-    let numSorteado = Math.floor(Math.random() * numPessoas); //Math.floor para aproximar para um número inteiro (para baixo)
-
-    document.getElementById("nome").innerHTML = pessoas[numSorteado]; 
-}
-
+sortearButton.addEventListener('click', () => { //Adicionando função ao botão "SORTEAR"
+  if (nomes.length > 0) { //Se houver pelo menos 1 nome inserido
+    const randomIndex = Math.floor(Math.random() * nomes.length); //Pegando um nome aleatório dentro dos que foram inseridos
+    const sorteado = nomes[randomIndex]; //Variável que recebe o nome sorteado
+    alert(`O nome sorteado foi: ${sorteado}`); //Exibindo qual foi o nome sorteado
+    window.location.reload(true)
+  } else {
+    alert('Insira pelo menos um nome.'); //Caso não for inserido nenhum nome através do input, será exibido esse alerta
+  }
+});
